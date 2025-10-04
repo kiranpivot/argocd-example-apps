@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2-helm-guestbook
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/kiranpivot/argocd-example-apps # Replace with your chart repository
+    targetRevision: HEAD
+    path: helm-guestbook # Path to your Helm chart within the repository
+    helm:
+      valueFiles:
+        - app2-values.yaml # First values file (e.g., common configurations)
+        #- values-environment.yaml # Second values file (e.g., environment-specific overrides)
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
