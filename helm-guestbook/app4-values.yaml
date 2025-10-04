@@ -10,8 +10,8 @@ image:
   pullPolicy: IfNotPresent
 
 env:
-  app-name: search-app4
-  db-name: search-dbb04
+  app_name: search-app4
+  db_name: search-dbb04
 
 containerPort: 80
 

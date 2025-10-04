@@ -10,8 +10,8 @@ image:
   pullPolicy: IfNotPresent
 
 env:
-  app-name: coveo-app2
-  db-name: coveo-dbb02
+  app_name: coveo-app2
+  db_name: coveo-dbb02
 
 containerPort: 80
 

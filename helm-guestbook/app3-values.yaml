@@ -10,8 +10,8 @@ image:
   pullPolicy: IfNotPresent
 
 env:
-  app-name: index-app3
-  db-name: index-dbb03
+  app_name: index-app3
+  db_name: index-dbb03
 
 containerPort: 80
 

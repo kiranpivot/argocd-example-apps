@@ -10,8 +10,8 @@ image:
   pullPolicy: IfNotPresent
 
 env:
-  app-name: streams-app1
-  db-name: streams-dbb01
+  app_name: streams-app1
+  db_name: streams-dbb01
 
 containerPort: 80
 
