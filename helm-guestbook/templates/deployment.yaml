@@ -25,10 +25,10 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            name: app-name
-            value: {{.Values.env.app-name}}
-            name: db-name
-            vaule: {{.Values.env.db-name}}
+            - name: app-name
+              value: {{.Values.env.app-name}}
+            - name: db-name
+              vaule: {{.Values.env.db-name}}
           ports:
             - name: http
               containerPort: {{ .Values.containerPort }}
